@@ -1,0 +1,49 @@
+<p>add works!</p>
+{{ id }}
+<div class="container">
+    <form formGroup="appartform">
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">titre</span>
+            </div>
+            <input type="text" id="titre" aria-label="titre" name="titre" formControlName="titre" class="form-control">
+          <div *ngIf="titre!.touched && titre!.invalid" class="alert alert-danger">
+            titre required
+          </div>
+          </div>
+          <br>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">quantite</span>
+            </div>
+            <input type="text" id="quantite" aria-label="quantite" name="quantite" formControlName="quantite" class="form-control">
+          <div *ngIf="quantite!.touched && quantite!.invalid" class="alert alert-danger">
+            quantite required
+          </div>
+          </div>
+          <br>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">prix</span>
+            </div>
+            <input type="text" id="prix" aria-label="prix" name="prix" formControlName="prix" class="form-control">
+          <div *ngIf="prix!.touched && prix!.invalid" class="alert alert-danger">
+            prix required
+          </div>
+          </div>
+          <br>
+          <div class="input-group-prepend">
+            <span class="input-group-text">aime</span>
+          </div>
+          <input type="text" id="aime" aria-label="aime" name="aime" formControlName="aime" class="form-control">
+        <div *ngIf="aime!.touched && aime!.invalid" class="alert alert-danger">
+          aime required
+        </div>
+        
+        <br>
+        <input type="submit" class="btn btn-primary" (click)="add()">
+
+
+    </form>
+</div>
